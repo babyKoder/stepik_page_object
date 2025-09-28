@@ -27,5 +27,5 @@ class BasePageLocators:
 
 
 class BasketPageLocators:
-    PRODUCTS_IN_BASKET = (By.CSS_SELECTOR, "#content_inner #basket_formset")
-    MESSAGE_BASKET_IS_EMPTY = (By.CSS_SELECTOR, "#content_inner > p")
+    BASKET_ITEMS = (By.CSS_SELECTOR, "#content_inner #basket_formset")
+    EMPTY_MESSAGE = (By.CSS_SELECTOR, "#content_inner > p")

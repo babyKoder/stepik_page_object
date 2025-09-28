@@ -28,9 +28,8 @@ def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
 
     page.go_to_basket_page()
     basket_page = BasketPage(browser, browser.current_url)
-    basket_page.should_basket_is_empty()
-    basket_page.should_no_products_in_basket()
-    time.sleep(4)
+
+    basket_page.should_be_empty()
 
 
 def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
@@ -41,5 +40,5 @@ def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
 
     page.go_to_basket_page()
     basket_page = BasketPage(browser, browser.current_url)
-    basket_page.should_basket_is_empty()
-    basket_page.should_no_products_in_basket()
+
+    basket_page.should_be_empty()

@@ -27,7 +27,7 @@ class BasePage:
     def is_not_element_present(self, how, what, timeout=4):
         try:
             wait = WebDriverWait(self.browser, timeout)
-            wait.until(Ec.presence_of_all_elements_located((how, what)))
+            wait.until(Ec.presence_of_element_located((how, what)))
         except TimeoutException:
             return True
 
@@ -35,8 +35,8 @@ class BasePage:
 
     def is_disappeared(self, how, what, timeout=4):
         try:
-            wait = WebDriverWait(self.browser, timeout, 1, TimeoutException)
-            wait.until_not(Ec.presence_of_all_elements_located((how, what)))
+            wait = WebDriverWait(self.browser, timeout, 1)
+            wait.until_not(Ec.presence_of_element_located((how, what)))
         except TimeoutException:
             return False
 
@@ -70,4 +70,3 @@ class BasePage:
 
     def should_be_basket_link(self):
         assert self.is_element_present(*BasePageLocators.BASKET_LINK), "Basket link is not presented"
-

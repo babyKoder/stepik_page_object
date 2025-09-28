@@ -22,3 +22,10 @@ class ProductPageLocators:
 class BasePageLocators:
     LOGIN_LINK = (By.ID, "login_link")
     LOGIN_LINK_INVALID = (By.ID, "login_link_inc")
+    BASKET_LINK = (By.XPATH, "//*[contains(@class,'basket-mini')]//a")
+    BASKET_LINK_INVALID = (By.XPATH, "//*[contains(@class,'123basket-mini')]//a")
+
+
+class BasketPageLocators:
+    PRODUCTS_IN_BASKET = (By.CSS_SELECTOR, "#content_inner #basket_formset")
+    MESSAGE_BASKET_IS_EMPTY = (By.CSS_SELECTOR, "#content_inner > p")

@@ -16,3 +16,4 @@ class ProductPageLocators:
     PRODUCT_PRICE = (By.XPATH, "//*[contains(@class,'product_main')]//*[contains(@class,'price_color')]")
     PRODUCT_NAME_SUCCESS_MESSAGE = (By.XPATH, "//*[contains(@class,'alert-success')][1]//strong")
     PRODUCT_PRICE_SUCCESS_MESSAGE = (By.XPATH, "//*[contains(@class,'alert-info')][1]//strong")
+    SUCCESS_MESSAGE = (By.XPATH, "//*[contains(@class,'alert-success')]")

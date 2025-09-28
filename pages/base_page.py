@@ -5,7 +5,7 @@ from selenium.common.exceptions import NoAlertPresentException, TimeoutException
 from selenium.webdriver.support import expected_conditions as Ec
 from selenium.webdriver.support.ui import WebDriverWait
 
-from stepik4.stepik_page_object.pages.locators import BasePageLocators
+from .locators import BasePageLocators
 
 
 class BasePage:
@@ -70,3 +70,7 @@ class BasePage:
 
     def should_be_basket_link(self):
         assert self.is_element_present(*BasePageLocators.BASKET_LINK), "Basket link is not presented"
+
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), ("User icon is not presented, "
+                                                                      "probably unauthorised user")

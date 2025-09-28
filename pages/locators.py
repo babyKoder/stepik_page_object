@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 
 
 class MainPageLocators:
-    LOGIN_LINK = (By.ID, "login_link")
+    pass
 
 
 class LoginPageLocators:
@@ -17,3 +17,8 @@ class ProductPageLocators:
     PRODUCT_NAME_SUCCESS_MESSAGE = (By.XPATH, "//*[contains(@class,'alert-success')][1]//strong")
     PRODUCT_PRICE_SUCCESS_MESSAGE = (By.XPATH, "//*[contains(@class,'alert-info')][1]//strong")
     SUCCESS_MESSAGE = (By.XPATH, "//*[contains(@class,'alert-success')]")
+
+
+class BasePageLocators:
+    LOGIN_LINK = (By.ID, "login_link")
+    LOGIN_LINK_INVALID = (By.ID, "login_link_inc")

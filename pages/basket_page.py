@@ -9,7 +9,7 @@ class BasketPage(BasePage):
         self.should_be_correct_empty_message()
 
     def should_be_empty_message(self):
-        assert self.is_element_present(*BasketPageLocators.EMPTY_MESSAGE), 'Basket is not empty'
+        assert self.is_element_present(*BasketPageLocators.EMPTY_MESSAGE), 'Empty basket message not shown'
 
     def should_not_be_products(self):
         assert self.is_not_element_present(*BasketPageLocators.BASKET_ITEMS), 'Products have in basket'

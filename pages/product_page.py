@@ -27,11 +27,11 @@ class ProductPage(BasePage):
             (f'Basket price does not match product price. '
              f'Expected {product_price}, got: {message_product_price}')
 
-    def should_not_be_success_message_v1(self):
+    def should_not_be_success_message_immediately(self):
         assert self.is_not_element_present(
             *ProductPageLocators.SUCCESS_MESSAGE), \
             "Success message is presented, but should not be"
 
-    def should_not_be_success_message_v2(self):
+    def should_not_be_success_message_disappear(self):
         assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
             "Success message not disappeared"
